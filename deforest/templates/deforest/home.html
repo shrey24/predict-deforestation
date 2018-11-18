@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <style>
+  html, body, #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 90%;
+    width: 90%;
+  }
+    </style>
+
+    <script src="https://js.arcgis.com/4.9/"></script>
+
+    <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView"
+    ],
+    function(Map, MapView) {
+      var map = new Map({ basemap: "streets" });
+
+      var view = new MapView({
+        container: "viewDiv",  // Reference to the DOM node that will contain the view
+        map: map               // References the map object created in step 3
+        });
+
+    } );
+    </script>
+    <title>Home</title>
+</head>
+
+<body>
+<h1>Home page</h1>
+
+<br/>
+<div id="viewDiv"></div>
+
+</body>
+</html>
